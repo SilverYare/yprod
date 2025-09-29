@@ -2,4 +2,4 @@
 ## Проект
 Этот репозиторий является каркасом для будущего веб-приложения.
 ## Ссылки
-- [Публичная страница на GitHub Pages] (https://silveryare.github.io/yprod/index.html)
+- [Публичная страница на GitHub Pages] ( https://silveryare.github.io/yprod/index.html)
