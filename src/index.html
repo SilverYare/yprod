@@ -1,55 +1,143 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная - Название вашего сайта</title>
-    <meta name="description" content="Краткое описание главной страницы вашего сайта">
-    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Главная — Уютный дворик</title>
+  <meta name="description" content="Подберём тур под ваш бюджет и даты. Бесплатная консультация и подбор отелей.">
+  <link rel="icon" href="../assets/favicon.ico">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../main.js" defer></script>
 </head>
-
 <body>
-    <!-- Шапка сайта -->
-    <header>
-        <a href="/">Логотип или название сайта</a>
-        <!-- Главное меню навигации -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">О нас</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- Уникальное основное содержимое страницы -->
-    <main>
-        <h1>Добро пожаловать на наш сайт!</h1>
-        <!-- Секция 1 с якорем -->
-        <section id="services">
-            <h2>Наши услуги</h2>
-            <p>Описание предоставляемых услуг...</p>
-            <a href="#contacts">Связаться с нами</a>
-            <!-- Якорная ссылка внутри страницы -->
-        </section>
-        <!-- Секция 2 с якорем -->
-        <section id="portfolio">
-            <h2>Портфолио</h2>
-            <p>Примеры наших работ...</p>
-        </section>
-        <!-- Секция 3 с якорем -->
-        <section id="contacts">
-            <h2>Контактная информация</h2>
-            <p>Наши контакты...</p>
-            <a href="contacts.html">Подробнее</a>
-            <!-- Ссылка на отдельную страницу -->
-        </section>
-    </main>
-    <!-- Подвал сайта -->
-    <footer>
-        <p>&copy; 2023 Название вашего сайта. Все права защищены.</p>
-        <p>Телефон: +7 (123) 456-78-90</p>
-    </footer>
-</body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Уютный дворик</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="index.html" aria-current="page">Главная</a></li>
+          <li><a class="site-nav__link" href="about.html">О нас</a></li>
+          <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle" class="btn theme-toggle" type="button" aria-pressed="false">🌙 Тема</button>
+    </div>
+  </header>
 
+  <main id="main">
+    <!-- HERO -->
+    <section class="section section--tight">
+      <div class="container hero">
+        <div>
+          <span class="hero__kicker">Мебель</span>
+          <h1>Уютный дворик: мангалы, беседки и гамаки.</h1>
+          <p>Всё для целесообразного отдыха. Поможем подобрать мебель, гарнитуры.</p>
+          <p>
+            <a class="btn btn--primary" href="#services">Посмотреть услуги</a>
+            <button id="openDialog" type="button" class="btn">Написать нам</button>
+          </p>
+        </div>
+        <div class="hero__media">
+          <img src="../assets/gallery-.jpg" alt="Главное фото направления">
+        </div>
+      </div>
+    </section>
+
+    <!-- УСЛУГИ -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Наши услуги</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Подбор и не хабывайваяаяаяаяй, просто отпускаяаяаяаяай</h3>
+            <p>Соберем всё под вас.</p>
+          </article>
+          <article class="card">
+            <h3>Логистика</h3>
+            <p>Поможем подобрать товары.</p>
+          </article>
+          <article class="card">
+            <h3>Сопровождение</h3>
+            <p>Круглосуточная поддержка и приём заявок.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ГАЛЕРЕЯ -->
+    <section class="section">
+      <div class="container">
+        <h2>Фотографии</h2>
+        <div class="gallery">
+          <figure><img src="../assets/gallery-1.jpg" alt="Фото 1"></figure>
+          <figure><img src="../assets/gallery-3.jpg" alt="Фото 2"></figure>
+          <figure><img src="../assets/gallery-2.jpg" alt="Фото 3"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ВИДЕО (если будет локальный файл — см. комментарий в HTML ниже) -->
+    <section class="section section--tight">
+      <div class="container">
+        <h2>Короткое видео о направлении</h2>
+        <div class="video">
+          <!-- Вариант 1: YouTube -->
+          <iframe width="720" height="405" src="https://rutube.ru/play/embed/2ccad6ea050694f302014007a0d6e751/" style="border: none;" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- КОНТАКТЫ -->
+    <section id="contacts" class="section">
+      <div class="container">
+        <h2>Контакты</h2>
+        <p>Телефон: +7 (900) 000-00-00</p>
+        <p><a class="btn" href="contacts.html">Подробнее</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Уютный дворик</p>
+    </div>
+  </footer>
+
+  <!-- МОДАЛКА -->
+  <dialog id="contactDialog" aria-labelledby="dialogTitle">
+    <h2 id="dialogTitle">Обратная связь</h2>
+    <form id="contactForm" method="dialog" novalidate>
+      <label for="name">Имя</label>
+      <input id="name" name="name" type="text" required minlength="2" autocomplete="given-name">
+
+      <label for="email">E-mail</label>
+      <input id="email" name="email" type="email" required autocomplete="email">
+
+      <label for="phone">Телефон</label>
+          <input class="form__input" id="phone" name="phone" type="tel" inputmode="tel"
+                 aria-describedby="phoneHelp"
+                 placeholder="+7 (___) ___-__-__"
+                 required pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$">
+          <small id="phoneHelp" class="form__help">Формат: +7 (909) 902-47-00</small>
+
+      <label class="form__label" for="date">Дата</label>
+          <input class="form__input" id="date" name="date" type="date">
+
+          <label class="form__label" for="topic">Тема</label>
+          <select class="form__input" id="topic" name="topic" required>
+            <option value="">Выберите тему</option>
+            <option>Вопрос</option>
+            <option>Заказ</option>
+          </select>
+
+          <label class="form__label" for="message">Сообщение</label>
+          <textarea class="form__input" id="message" name="message" rows="4" required></textarea>
+
+          <div class="form__actions">
+            <button type="button" id="closeDialog" class="btn-secondary">Закрыть</button>
+            <button type="submit" class="btn-primary">Отправить</button>
+      </div>
+    </form>
+  </dialog>
+</body>
 </html>
